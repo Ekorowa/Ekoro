@@ -1,0 +1,19 @@
+@page "/a/{alias}"
+@inject IOrchardHelper _orchardHelper;
+@{
+    var content = await _orchardHelper.GetContentItemByHandleAsync($"Alias:{Alias}");
+    if (content != null)
+    {
+        ViewData["Title"] = content.DisplayText;
+    }
+}
+@if (content != null && content.Content.LiquidPart != null)
+{
+    var html = (await _orchardHelper.LiquidToHtmlAsync((string)content.Content.LiquidPart.Liquid)).GetString();
+    @Html.Raw(html)
+}
+@functions
+{
+    [FromRoute]
+    public string Alias { get; set; }
+}

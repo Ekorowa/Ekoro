@@ -1,0 +1,27 @@
+@inject IOptions<AppSettings> AppSettings
+@{
+    var app = AppSettings.Value;
+}
+<!DOCTYPE html class="h-100">
+<html>
+<head>
+    @{
+        await Html.RenderPartialAsync("Head", app);
+    }
+</head>
+<body class="d-flex flex-column h-100">
+    @{
+        await Html.RenderPartialAsync("Header", app);
+    }
+    <main>
+        @RenderBody()
+    </main>
+    @{
+        await Html.RenderPartialAsync("Footer", app);
+    }
+    @{
+        await Html.RenderPartialAsync("FootScripts", app);
+    }
+</body>
+</html>
+<!-- @app.Version -->
