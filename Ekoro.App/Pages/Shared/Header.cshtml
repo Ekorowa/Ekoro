@@ -3,9 +3,9 @@
     var app = Model;
 }
 
-<header>
-    <nav>
-        <a href="/">@app.Name</a>
+<header role="banner">
+    <a href="/">@app.Name</a>
+    <nav role="navigation">
         @{
             await Html.RenderPartialAsync("Menu", app);
         }
