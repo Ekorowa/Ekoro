@@ -5,23 +5,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    @{
-        await Html.RenderPartialAsync("Head", app);
-    }
+    <partial name="Head" model="app"></partial>
 </head>
 <body>
-    @{
-        await Html.RenderPartialAsync("Header", app);
-    }
+    <partial name="Header" model="app"></partial>
     <main role="main">
         @RenderBody()
     </main>
-    @{
-        await Html.RenderPartialAsync("Footer", app);
-    }
-    @{
-        await Html.RenderPartialAsync("FootScripts", app);
-    }
+    <partial name="Footer" model="app"></partial>
+    <partial name="FootScripts" model="app"></partial>
 </body>
 </html>
 <!-- @app.Version -->

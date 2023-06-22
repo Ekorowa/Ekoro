@@ -2,12 +2,12 @@
 @inject IOrchardHelper OrchardHelper;
 @model IndexModel
 @{
-    ViewData["Title"] = Model.ContentItem.DisplayText;
+    ViewData["Title"] = Model.Html.Title;//ContentItem.DisplayText;
 }
 
 @if (Model.ContentItem != null && Model.ContentItem.Content.LiquidPart != null)
 {
-    var html = (await OrchardHelper.LiquidToHtmlAsync((string)Model.ContentItem.Content.LiquidPart.Liquid)).GetString();
-    @Html.Raw(html)
+    //var html = (await OrchardHelper.LiquidToHtmlAsync((string)Model.ContentItem.Content.LiquidPart.Liquid)).GetString();
+    @Html.Raw(Model.Html.Body)
 }
 

@@ -1,6 +1,8 @@
+using OrchardCore;
+
 namespace Ekoro.App.Pages;
 
-public class AliasPageModel : PageModel
+public class AliasPageModel : BasePageModel
 {
     private readonly ILogger<AliasPageModel> _logger;
     private readonly IOrchardHelper _orchardHelper;
@@ -17,16 +19,26 @@ public class AliasPageModel : PageModel
 
     public async Task OnGetAsync()
     {
-        ContentItem = await _orchardHelper.GetContentItemByAliasAsync(_alias);
+        await LoadHtml(_alias);
+
+        ViewData["Title"] = Html.Title;
+        ViewData["Description"] = Html.MetaDescription;
+        ViewData["Keywords"] = Html.MetaKeywords;
+    }
+
+    private async Task LoadHtml(string alias)
+    {
+        ContentItem = await _orchardHelper.GetContentItemByAliasAsync(alias);
 
         if (ContentItem != null)
         {
-            ViewData["Title"] = ContentItem.DisplayText;
+            Html.Title = ContentItem.DisplayText;
+            Html.Body = (await _orchardHelper.LiquidToHtmlAsync((string)ContentItem.Content.LiquidPart.Liquid)).GetString();
             if (ContentItem.Content.SeoMetaPart != null)
             {
                 var seo = ContentItem.Content.SeoMetaPart;
-                ViewData["Description"] = (string)seo.MetaDescription;
-                ViewData["Keywords"] = (string)seo.MetaKeywords;
+                Html.MetaDescription = (string)seo.MetaDescription;
+                Html.MetaKeywords = (string)seo.MetaKeywords;
             }
         }
     }

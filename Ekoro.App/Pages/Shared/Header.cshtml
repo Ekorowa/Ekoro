@@ -2,15 +2,10 @@
 @{
     var app = Model;
 }
-
 <header role="banner">
     <a href="/">@app.Name</a>
     <nav role="navigation">
-        @{
-            await Html.RenderPartialAsync("Menu", app);
-        }
+        <partial name="Menu" model="app"></partial>
     </nav>
-    @* @{
-        await Html.RenderPartialAsync("MainMenu", app);
-    } *@
+    @* <partial name="MainMenu"></partial> *@
 </header>

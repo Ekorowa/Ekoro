@@ -5,10 +5,10 @@
     var keywords = ViewData["Keywords"];
     var description = ViewData["Description"];
 }
-<title>@title</title>
 <meta charset="utf-8" />
+<meta name="author" content="@app.Author">
 <meta name="keywords" content="@ViewData["Keywords"]" />
 <meta name="description" content="@ViewData["Description"]">
-<meta name="author" content="@app.Author">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-@* <link rel="stylesheet" href="/styles.css" /> *@
+@* <link rel="stylesheet" href="~/Ekoro.App.styles.css" /> *@
+<title>@title</title>
