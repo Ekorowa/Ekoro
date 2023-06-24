@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33513.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekoro.App", "Ekoro.App\Ekoro.App.csproj", "{A0359E82-ECAD-40CC-9412-6EA2DEC3693C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekoro.App", "src\Ekoro.App\Ekoro.App.csproj", "{4BBD7D4A-1D1F-4595-9576-4634B7BA3881}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekoro.Core", "Ekoro.Core\Ekoro.Core.csproj", "{61A9777E-2B5F-440A-953D-720FF7A19E91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekoro.Business", "src\Ekoro.Business\Ekoro.Business.csproj", "{A9102CBF-F36E-4C18-9C24-89B1F49B5B47}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekoro.Business", "Ekoro.Business\Ekoro.Business.csproj", "{EF4895F7-B252-4A33-A142-10AD252EB5E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekoro.Core", "src\Ekoro.Core\Ekoro.Core.csproj", "{56B69775-037E-4B1A-BA48-22D2D849DA43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B29209E4-41EB-4B7E-AF07-8517E0D29542}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A0359E82-ECAD-40CC-9412-6EA2DEC3693C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0359E82-ECAD-40CC-9412-6EA2DEC3693C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0359E82-ECAD-40CC-9412-6EA2DEC3693C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0359E82-ECAD-40CC-9412-6EA2DEC3693C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61A9777E-2B5F-440A-953D-720FF7A19E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61A9777E-2B5F-440A-953D-720FF7A19E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61A9777E-2B5F-440A-953D-720FF7A19E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61A9777E-2B5F-440A-953D-720FF7A19E91}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF4895F7-B252-4A33-A142-10AD252EB5E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF4895F7-B252-4A33-A142-10AD252EB5E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF4895F7-B252-4A33-A142-10AD252EB5E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF4895F7-B252-4A33-A142-10AD252EB5E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BBD7D4A-1D1F-4595-9576-4634B7BA3881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BBD7D4A-1D1F-4595-9576-4634B7BA3881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BBD7D4A-1D1F-4595-9576-4634B7BA3881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BBD7D4A-1D1F-4595-9576-4634B7BA3881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9102CBF-F36E-4C18-9C24-89B1F49B5B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9102CBF-F36E-4C18-9C24-89B1F49B5B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9102CBF-F36E-4C18-9C24-89B1F49B5B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9102CBF-F36E-4C18-9C24-89B1F49B5B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56B69775-037E-4B1A-BA48-22D2D849DA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B69775-037E-4B1A-BA48-22D2D849DA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B69775-037E-4B1A-BA48-22D2D849DA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B69775-037E-4B1A-BA48-22D2D849DA43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
